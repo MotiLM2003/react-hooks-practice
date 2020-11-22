@@ -1,12 +1,14 @@
 import React from 'react';
 import UseState from './UseState';
 import UseEffectHook from './UseEffectHook';
+import UseMemoHook from './UseMemoHook';
 
 const App = () => {
   return (
     <div className='container'>
       {/* <UseState /> */}
-      <UseEffectHook />
+      {/* <UseEffectHook /> */}
+      <UseMemoHook />
     </div>
   );
 };

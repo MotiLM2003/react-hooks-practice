@@ -31,7 +31,7 @@ const UseEffectHook = () => {
       <button onClick={() => setResourceType('posts')}>Posts</button>
       <button onClick={() => setResourceType('users')}>users</button>
       <button onClick={() => setResourceType('comments')}>comments</button>
-      <h1>{resourceType}</h1>
+      <h1>{resourceType} </h1>
       {/*items &&
         items.map((item) => {
           return <div key={item.id}>{JSON.stringify(item)}</div>;
