@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const List = ({ getItems }) => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    setItems(getItems());
+    console.log('updating items');
+  }, [getItems]);
+
   return (
     <div>
-      <h1>Hello</h1>
+      {items.map((item) => (
+        <div>{item}</div>
+      ))}
     </div>
   );
 };

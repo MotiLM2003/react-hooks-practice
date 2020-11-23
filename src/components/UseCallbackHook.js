@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import List from './List';
 
 const UseCallbackHook = () => {
   const [number, setNumber] = useState(1);
   const [dark, setDark] = useState(false);
 
-  const getItems = () => {
+  const getItems = useCallback(() => {
     return [number, number + 1, number + 2];
-  };
+  }, [number]);
 
   const theme = {
     backgroundColor: dark ? '#333' : '#fff',
@@ -23,7 +23,7 @@ const UseCallbackHook = () => {
       <button onClick={() => setDark((prevDark) => !prevDark)}>
         Toggle Theme
       </button>
-      <List />
+      <List getItems={getItems} />
     </div>
   );
 };
